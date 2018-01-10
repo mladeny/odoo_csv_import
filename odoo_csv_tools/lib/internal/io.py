@@ -6,7 +6,7 @@ Created on 10 sept. 2016
 import csv
 import os
 
-from csv_reader import UnicodeWriter, UnicodeReader
+from .csv_reader import UnicodeWriter, UnicodeReader
 
 
 def write_csv(filename, header, data):

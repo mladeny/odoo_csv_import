@@ -21,15 +21,15 @@ import csv
 
 from time import time
 from itertools import islice, chain
-from xmlrpclib import Fault
+from xmlrpc.client import Fault
 
-from lib import conf_lib
-from lib.conf_lib import log_error, log_info, log
-from lib.internal.rpc_thread import RpcThread
-from lib.internal.io import ListWriter
-from lib.internal.csv_reader import UnicodeReader, UnicodeWriter
+from .lib import conf_lib
+from .lib.conf_lib import log_error, log_info, log
+from .lib.internal.rpc_thread import RpcThread
+from .lib.internal.io import ListWriter
+from .lib.internal.csv_reader import UnicodeReader, UnicodeWriter
 
-csv.field_size_limit(sys.maxint)
+csv.field_size_limit(sys.maxsize)
 
 
 def batch(iterable, size):

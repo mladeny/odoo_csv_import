@@ -1,5 +1,5 @@
 import openerplib
-import ConfigParser
+import configparser
 import logging
 import sys
 
