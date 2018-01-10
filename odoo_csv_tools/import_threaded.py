@@ -147,7 +147,7 @@ def read_file(file_to_read, delimiter=';', encoding='utf-8-sig', skip=0):
     log('open %s' % file_to_read)
     file_ref = open(file_to_read, 'r')
     reader = UnicodeReader(file_ref, delimiter=delimiter, encoding='utf-8-sig')
-    header = reader.next()
+    header = reader.__next__()
     header = get_real_header(header)
     check_id_column(header)
     skip_line(reader)
